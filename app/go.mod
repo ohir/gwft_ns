@@ -9,7 +9,7 @@ require (
 )
 
 replace (
-	example.com/mC => github.com/ohir/gwft-client v0.1.5
+	example.com/mC => github.com/ohir/gwft-client v0.1.6
 	example.com/mP => github.com/ohir/gwft-protocol v0.1.5
 	example.com/mS => github.com/ohir/gwft-server v0.1.5
 )
