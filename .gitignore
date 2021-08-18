@@ -1,3 +1,5 @@
+go.work.sum
+app/app
 spad
 *.note
 *.env
