@@ -1,0 +1,6 @@
+github.com/ohir/gwft-client v0.1.5 h1:xTe3N94FQkzNB6uGxutU/hdVWP2ME81Ele+AteGaaHc=
+github.com/ohir/gwft-client v0.1.5/go.mod h1:InnzuUkQ2SktAyL1KR3aot04Ja4KAeOTwrpjtXwSjCw=
+github.com/ohir/gwft-protocol v0.1.5 h1:FyQ4fJz1W/qJG2S6HsYuxrtS27n4UUmgAcfELbKHEjU=
+github.com/ohir/gwft-protocol v0.1.5/go.mod h1:R7m1avLsy+nRwOHmRnxXgKd1+yrSlMxDGj4fBQLMbIs=
+github.com/ohir/gwft-server v0.1.5 h1:h0z4eGt6moIcikllzt9ufX2+dF+EMxiuva0sT//uotw=
+github.com/ohir/gwft-server v0.1.5/go.mod h1:PU5nPsI0HSMb/7WYNtKoZXQ2G+Xs7Vtanke/EK4gF8A=
