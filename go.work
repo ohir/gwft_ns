@@ -1,15 +1,9 @@
 go 1.17
 
 directory (
-	server
-	client
-	protocol
-	app
-)
-
-replace ( // bootstrap new test
-	example.com/mC => ./client
-	example.com/mP => ./protocol
-	example.com/mS => ./server
+	./server	// example.com/mS  - uses protocol
+	./client        // example.com/mC  - uses protocol
+	./protocol      // example.com/mP  - no dependencies
+	./app           // example.com/app - command, uses mS, mC, mP
 )
 

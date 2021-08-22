@@ -39,5 +39,20 @@ find . -name go.mod -exec sed -ire "s#ohir/#yoursGH/#" {} \;
 - compiles_015 | test broken server/client module. 
 - does_not_compile_016 | test whether tool resolved [this reported bug](https://github.com/golang/go/issues/45713#issuecomment-901475788).
 - does_not_compile_021 | test whether tool resolved [this reported bug](https://github.com/golang/go/issues/45713#issuecomment-902996813).
-- does_not_compile_021 
+
+### Notes
+
+The modules code was updated to the v0.2.1 from the "[upstream](https://github.com/ohir/gwft)" subrepos.
+This bootstrap uses the simplest `workspace` form, with `go.work` file being:
+```
+go 1.17
+
+directory (
+	./server	// example.com/mS  - uses protocol
+	./client        // example.com/mC  - uses protocol
+	./protocol      // example.com/mP  - no dependencies
+	./app           // example.com/app - command, uses mS, mC, mP
+)
+
+```
 
