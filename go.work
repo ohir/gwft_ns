@@ -7,3 +7,9 @@ directory (
 	app
 )
 
+replace ( // bootstrap new test
+	example.com/mC => ./client
+	example.com/mP => ./protocol
+	example.com/mS => ./server
+)
+

@@ -19,8 +19,8 @@ func main() {
 func Info() string {
 	bi, _ := debug.ReadBuildInfo()
 
-	r := fmt.Sprintf("Main module %s [%s]\nUses:",
-		bi.Main.Path, bi.Main.Version)
+	r := fmt.Sprintf("Main module %s [%s/%s]\nUses:",
+		bi.Main.Path, Vstamp, bi.Main.Version)
 	for _, mo := range bi.Deps {
 		r += "\n\t" + mo.Path
 		if mo.Replace.Path != "" {
