@@ -12,38 +12,30 @@ go install golang.org/dl/gotip@latest
 gotip download dev.cmdgo
 ```
 
-To install this (gwft-nosub) development tree:
+To install this (gwft_ns) development tree:
 
 ```
-git clone --tags https://github.com/ohir/gwft_ns.git
+git clone https://github.com/ohir/gwft_ns.git
 ```
 
-Now you can build app in either mode:
+Now you can try to build the `app`:
 
 ```
 cd gwft_ns/app
-gotip -workfile=off build    # use modules
-gotip build                  # use directories as set in gwft_ns/go.work file
+gotip build -v               # use directories as set in gwft_ns/go.work file
 ```
 
-Note that this repo uses `example.com/` prefixed paths.
-You can change go.mod and git config to point to your github clone(s) issuing (in the gwft_ns directory):
-
-```
-find . -name config -exec sed -ire "s#ohir/#yoursGH/#" {} \;
-find . -name go.mod -exec sed -ire "s#ohir/#yoursGH/#" {} \;
-```
 
 ### Tags:
 
-- compiles_015 | test broken server/client module. 
+- compiles_015 | test broken server/client module. Should start to compile w/ `-workfile=off`.
 - does_not_compile_016 | test whether tool resolved [this reported bug](https://github.com/golang/go/issues/45713#issuecomment-901475788).
 - does_not_compile_021 | test whether tool resolved [this reported bug](https://github.com/golang/go/issues/45713#issuecomment-902996813).
 
 ### Notes
 
-The modules code was updated to the v0.2.1 from the "[upstream](https://github.com/ohir/gwft)" subrepos.
-This bootstrap uses the simplest `workspace` form, with `go.work` file being:
+The modules code was updated to the v0.2.1 from the "[public](https://github.com/ohir/gwft)" subrepos.
+This "bootstrap" repo uses the simplest `workspace` form, with `go.work` file being:
 ```
 go 1.17
 
@@ -51,7 +43,7 @@ directory (
 	./server	// example.com/mS  - uses protocol
 	./client        // example.com/mC  - uses protocol
 	./protocol      // example.com/mP  - no dependencies
-	./app           // example.com/app - command, uses mS, mC, mP
+	./app           // example.com/app - command, uses /mS, /mC, /mP
 )
 
 ```
